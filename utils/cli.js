@@ -1,5 +1,5 @@
-const meow = require('meow');
-const meowHelp = require('cli-meow-help');
+const meow = require('meow')
+const meowHelp = require('cli-meow-help')
 
 const flags = {
   clear: {
@@ -24,23 +24,23 @@ const flags = {
     alias: `v`,
     desc: `Print CLI version`
   }
-};
+}
 
 const commands = {
   help: { desc: `Print help info` }
-};
+}
 
 const helpText = meowHelp({
   name: `workloose`,
   flags,
   commands
-});
+})
 
 const options = {
   inferType: true,
   description: false,
   hardRejection: false,
   flags
-};
+}
 
-module.exports = meow(helpText, options);
+module.exports = meow(helpText, options)
