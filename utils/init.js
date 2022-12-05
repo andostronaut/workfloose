@@ -1,9 +1,9 @@
-const welcome = require('cli-welcome');
-const pkg = require('./../package.json');
-const unhandled = require('cli-handle-unhandled');
+const welcome = require('cli-welcome')
+const pkg = require('./../package.json')
+const unhandled = require('cli-handle-unhandled')
 
 module.exports = ({ clear = true }) => {
-  unhandled();
+  unhandled()
   welcome({
     title: `workfloose`,
     tagLine: `by iamando`,
@@ -13,5 +13,5 @@ module.exports = ({ clear = true }) => {
     color: '#000000',
     bold: true,
     clear
-  });
-};
+  })
+}
