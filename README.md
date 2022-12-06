@@ -19,10 +19,10 @@ yarn add global workfloose
 
 ## Command-line Interface (CLI)
 
-The following is the help text from the workfloose cli. To see this and more information anytime,add the --help flag to your call.
+The following is the help text from the workfloose cli. To see this and more information anytime,add the **help** command to your call.
 
 ```bash
-workfloose --help
+workfloose help
 ```
 
 ## Support
