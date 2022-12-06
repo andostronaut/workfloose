@@ -22,8 +22,8 @@
     "utils"
   ],
   "scripts": {
-    "lint": "eslint \"./**/*.{js,json}\"",
-    "format": "prettier --write \"./**/*.{js,json}\"",
+    "lint": "eslint \"./**/*.{js,ts}\"",
+    "format": "prettier --write \"./**/*.{js,ts}\"",
     "prepare": "husky install"
   },
   "dependencies": {
