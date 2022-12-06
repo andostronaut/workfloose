@@ -22,7 +22,7 @@
     "utils"
   ],
   "scripts": {
-    "lint": "eslint --fix \"./**/*.{js,json}\"",
+    "lint": "eslint \"./**/*.{js,json}\"",
     "format": "prettier --write \"./**/*.{js,json}\"",
     "prepare": "husky install"
   },
