@@ -8,12 +8,12 @@ Scaffold GitHub workflow for CI/CD
 ## Install
 
 ```bash
-# npm
 npm install -g workfloose
 ```
 
+or
+
 ```bash
-# yarn
 yarn add global workfloose
 ```
 
@@ -22,7 +22,6 @@ yarn add global workfloose
 The following is the help text from the workfloose cli. To see this and more information anytime,add the --help flag to your call.
 
 ```bash
-# help
 workfloose --help
 ```
 
