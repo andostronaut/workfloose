@@ -1,21 +1,24 @@
-name: assign-pull-request
+name: assign
 on:
   pull_request:
     types: [opened, reopened]
 jobs:
-  assign-pull-request:
+  assign-reviewers:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - name: Assign Pull Request
-        uses: delivery-much/actions-assigner@v1
+      - uses: delivery-much/actions-assigner@v1
         with:
           token: ${{ secrets.GH_TOKEN }}
           reviewers: iamando
 
-      - name: Assign labels Pull Request
-        uses: actions-ecosystem/action-add-labels@v1
+  assign-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions-ecosystem/action-add-labels@v1
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           labels: |

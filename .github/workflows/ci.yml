@@ -11,13 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Cache Node.js modules
-        uses: actions/cache@v3
+      - uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -25,8 +23,6 @@ jobs:
             ${{ runner.OS }}-node-
             ${{ runner.OS }}-
 
-      - name: NPM Install
-        run: npm install --registry=https://registry.npmjs.org
+      - run: npm install --registry=https://registry.npmjs.org
 
-      - name: Eslint
-        run: npm run lint
+      - run: npm run lint
