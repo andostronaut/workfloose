@@ -19,10 +19,28 @@ yarn add global workfloose
 
 ## Command-line Interface (CLI)
 
+Change to your working repository
+
+```bash
+cd project_name
+```
+
+Now, you can generate workflows with the command **genarate**
+
+```bash
+workfloose generate
+```
+
 The following is the help text from the workfloose cli. To see this and more information anytime,add the **help** command to your call.
 
 ```bash
 workfloose help
+```
+
+Check version of workfloose with **version** command
+
+```bash
+workfloose version
 ```
 
 ## Support
