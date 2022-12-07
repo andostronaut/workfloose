@@ -1,0 +1,13 @@
+name: assign-pull-request
+on:
+  pull_request:
+    types: [opened, reopened]
+jobs:
+  assign-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign Pull Request
+        uses: delivery-much/actions-assigner@v1
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          reviewers: iamando

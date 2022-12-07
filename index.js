@@ -1,23 +1,21 @@
 #!/usr/bin/env node
 
-/**
- * workfloose
- * Scaffold github workflow for CI/CD
- *
- * @author iamando <iamando@tuta.io>
- */
+const init = require('./lib/utils/init')
+const cli = require('./lib/utils/cli')
+const log = require('./lib/utils/log')
 
-const init = require('./utils/init')
-const cli = require('./utils/cli')
-const log = require('./utils/log')
+const workfloose = require('./lib/workfloose')
 
 const input = cli.input
 const flags = cli.flags
 const { clear, debug } = flags
 
-;(async () => {
+const boot = async () => {
   init({ clear })
-  input.includes(`help`) && cli.showHelp(0)
+  input.includes('help') && cli.showHelp(0)
+  input.includes('generate') && workfloose.generate()
 
   debug && log(flags)
-})()
+}
+
+boot()
