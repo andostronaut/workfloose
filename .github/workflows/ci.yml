@@ -1,4 +1,4 @@
-name: build
+name: ci
 on: [push, pull_request]
 jobs:
   build:
@@ -30,12 +30,3 @@ jobs:
 
       - name: Eslint
         run: npm run lint
-
-      - name: Run Testing Reports
-        run: npm run test:cov
-
-      - name: Upload Testing Reports
-        run: |
-          bash <(curl -s https://codecov.io/bash)
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
