@@ -13,8 +13,10 @@
     "interface-name-prefix": "off",
     "explicit-function-return-type": "off",
     "explicit-module-boundary-types": "off",
-    "no-unused-vars": ["error"],
-    "consistent-type-definitions": "off"
+    "no-unused-vars": "error",
+    "consistent-type-definitions": "off",
+    "no-undef": "error",
+    "no-use-before-define": "error"
   },
   "overrides": [
     {
