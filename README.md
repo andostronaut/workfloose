@@ -3,7 +3,7 @@
 ![Compile and build](https://github.com/iamando/workfloose/actions/workflows/ci.yml/badge.svg)
 [![GitHub Super-Linter](https://github.com/iamando/workfloose/workflows/lint-code-base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
-Scaffold GitHub workflow for CI/CD
+Scaffold workflow for CI/CD
 
 ## Install
 
