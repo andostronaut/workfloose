@@ -1,6 +1,6 @@
 {
   "name": "workfloose",
-  "description": "Scaffold github workflow for CI/CD",
+  "description": "Scaffold workflow for CI/CD",
   "version": "1.0.0",
   "license": "MIT",
   "bin": {
@@ -16,7 +16,8 @@
     "workfloose",
     "github",
     "workflow",
-    "CI/CD"
+    "CI/CD",
+    "gitlab"
   ],
   "files": [
     "index.js",
