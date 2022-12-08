@@ -11,9 +11,9 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase-if-necessary
     reviewers:
-      - 'iamando'
+      - '' # add your github username
     assignees:
-      - 'iamando'
+      - '' # add your github username
     labels:
       - 'dependencies'
       - 'npm'
