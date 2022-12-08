@@ -11,6 +11,6 @@ jobs:
 
       - uses: jascodes/pr-branch-action@1.0.3
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # generate your secret token https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
           PULL_REQUEST_BRANCH: master
           PULL_REQUEST_TITLE: ${{ github.event.commits[0].message }}

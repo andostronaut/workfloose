@@ -10,8 +10,8 @@ jobs:
 
       - uses: delivery-much/actions-assigner@v1
         with:
-          token: ${{ secrets.GH_TOKEN }}
-          reviewers: iamando
+          token: ${{ secrets.GH_TOKEN }} # generate your secret token https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+          # reviewers: add your github username
 
   assign-labels:
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
 
       - uses: actions-ecosystem/action-add-labels@v1
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }} # generate your secret token https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
           labels: |
             automated
             pull-request
