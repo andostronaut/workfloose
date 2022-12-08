@@ -13,7 +13,6 @@
     "interface-name-prefix": "off",
     "explicit-function-return-type": "off",
     "explicit-module-boundary-types": "off",
-    "no-explicit-any": "off",
     "no-unused-vars": ["error"],
     "consistent-type-definitions": "off"
   },
