@@ -1,4 +1,4 @@
-name: lint-code-base
+name: super-linter
 on:
   pull_request:
     branches: [master, develop]
