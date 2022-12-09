@@ -8,10 +8,12 @@ Scaffold workflow for CI/CD
 ## Install
 
 ```bash
-npm install -g workfloose
+npx workfloose
 ```
 
-or
+```bash
+npm install -g workfloose
+```
 
 ```bash
 yarn add global workfloose

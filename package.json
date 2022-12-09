@@ -10,14 +10,16 @@
     "name": "iamando",
     "email": "iamando@tuta.io"
   },
-  "homepage": "https://github.com/iamando/workfloose",
+  "homepage": "https://github.com/iamando/workfloose#readme",
   "repository": "https://github.com/iamando/workfloose.git",
   "keywords": [
     "workfloose",
     "github",
     "workflow",
     "CI/CD",
-    "gitlab"
+    "gitlab",
+    "automated",
+    "scaffold"
   ],
   "files": [
     "index.js",
