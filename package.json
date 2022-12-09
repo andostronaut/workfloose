@@ -23,7 +23,9 @@
   ],
   "files": [
     "index.js",
-    "utils"
+    "lib",
+    "templates",
+    "docs"
   ],
   "scripts": {
     "lint": "eslint \"./**/*.{js,ts}\"",
