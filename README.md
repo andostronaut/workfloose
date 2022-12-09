@@ -11,10 +11,10 @@ Scaffold workflow for CI/CD
 # recommended
 npx workfloose
 
-# using npm global instalation
+# using npm global installation
 npm install -g workfloose
 
-# using yarn global instalation
+# using yarn global installation
 yarn add global workfloose
 ```
 
