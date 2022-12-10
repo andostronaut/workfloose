@@ -1,12 +1,17 @@
 name: ci
+
 on: [push, pull_request]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
+
       matrix:
         go-version: latest
+
     steps:
       - uses: actions/checkout@v3
 

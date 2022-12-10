@@ -1,15 +1,21 @@
 name: ci
+
 on: [push, pull_request]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
+
       matrix:
         php-version: latest
+
         dependency-versions:
           - lowest
           - highest
+
     steps:
       - uses: actions/checkout@v3
 
