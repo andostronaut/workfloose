@@ -1,0 +1,33 @@
+image: node:16.16.0
+
+stages:
+  - build
+  - lint
+  - test
+
+installing:
+  stage: build
+  script:
+    - npm install
+    - npm run type:check
+  cache:
+    key:
+      files:
+        - package-lock.json
+  artifacts:
+    paths:
+      - node_modules/
+
+linting:
+  stage: lint
+  needs:
+    - installing
+  script:
+    - npm run lint
+
+testing:
+  stage: test
+  needs:
+    - installing
+  script:
+    - npm run test
