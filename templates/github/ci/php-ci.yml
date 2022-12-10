@@ -6,7 +6,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-version: 8.0
+        php-version: latest
         dependency-versions:
           - lowest
           - highest

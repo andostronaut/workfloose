@@ -6,7 +6,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java-version: 17
+        java-version: latest
         java-distribution: temurin
     steps:
       - uses: actions/checkout@v3
