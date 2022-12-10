@@ -1,33 +1,25 @@
 image: node:latest
 
-stages:
-  - build
-  - lint
-  - test
+services:
+  - mysql:latest
+  - redis:latest
+  - postgres:latest
 
-installing:
-  stage: build
+cache:
+  paths:
+    - node_modules/
+
+test_async:
   script:
     - npm install
-    - npm run type:check
-  cache:
-    key:
-      files:
-        - package-lock.json
-  artifacts:
-    paths:
-      - node_modules/
+    - node ./specs/start.js ./specs/async.spec.js
 
-linting:
-  stage: lint
-  needs:
-    - installing
+test_db:
   script:
-    - npm run lint
+    - npm install
+    - node ./specs/start.js ./specs/db-postgres.spec.js
 
-testing:
-  stage: test
-  needs:
-    - installing
-  script:
-    - npm run test
+deploy:
+  stage: deploy
+  script: echo "Define your deployment script!"
+  environment: production
