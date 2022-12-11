@@ -1,11 +1,14 @@
 name: pull-request
+
 on:
   push:
     branches-ignore:
       - master
+
 jobs:
   create-pull-request:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
