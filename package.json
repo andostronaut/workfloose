@@ -19,12 +19,14 @@
     "CI/CD",
     "gitlab",
     "automated",
-    "scaffold"
+    "scaffold",
+    "CLI",
+    "CI",
+    "CD"
   ],
   "files": [
     "index.js",
     "lib",
-    "templates",
     "docs"
   ],
   "scripts": {
