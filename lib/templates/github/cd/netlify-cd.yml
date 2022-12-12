@@ -1,0 +1,19 @@
+name: cd
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: jsmrcaga/action-netlify-deploy@v1
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.GH_NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.GH_NETLIFY_SITE_ID }}
+          NETLIFY_DEPLOY_MESSAGE: 'Prod deploy v${{ github.ref }}'
+          NETLIFY_DEPLOY_TO_PROD: true
