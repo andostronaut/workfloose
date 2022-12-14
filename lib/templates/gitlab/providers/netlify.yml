@@ -1,0 +1,8 @@
+deploy:
+  stage: deploy
+  image: node:latest
+  environment: production
+  only:
+    - master
+  script:
+    - npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
