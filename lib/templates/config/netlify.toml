@@ -1,0 +1,11 @@
+[build]
+  publish = "build"
+
+[build.processing]
+  skip_processing = true
+
+[context.branch-name.processing]
+  skip_processing = false
+[context.branch-name.processing.css]
+  bundle = true
+  minify = true
