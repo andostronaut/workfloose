@@ -1,25 +1,14 @@
 image: node:latest
 
-services:
-  - mysql:latest
-  - redis:latest
-  - postgres:latest
-
 cache:
   paths:
     - node_modules/
 
-test_async:
-  script:
-    - npm install
-    - node ./specs/start.js ./specs/async.spec.js
+before_script:
+  - npm install
 
-test_db:
-  script:
-    - npm install
-    - node ./specs/start.js ./specs/db-postgres.spec.js
+lint:
+  script: npm run lint
 
-deploy:
-  stage: deploy
-  script: echo "Define your deployment script!"
-  environment: production
+test:
+  script: npm run test
