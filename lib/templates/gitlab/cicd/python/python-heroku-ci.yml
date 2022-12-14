@@ -1,0 +1,64 @@
+image: python:latest
+
+stages:
+  - test
+  - run
+  - pages
+  - deploy
+
+variables:
+  PIP_CACHE_DIR: '$CI_PROJECT_DIR/.cache/pip'
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python --version
+  - pip install virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
+
+test:
+  stage: test
+  script:
+    - python setup.py test
+    - pip install tox flake8
+    - tox -e py36,flake8
+
+run:
+  stage: run
+  script:
+    - python setup.py bdist_wheel
+
+    - pip install dist/*
+
+  artifacts:
+    paths:
+      - dist/*.whl
+
+pages:
+  stage: pages
+  script:
+    - pip install sphinx sphinx-rtd-theme
+    - cd doc
+    - make html
+    - mv build/html/ ../public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+deploy:
+  stage: deploy
+  image: ruby:latest
+  environment: production
+  only:
+    - master
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY

@@ -1,0 +1,33 @@
+image: node:latest
+
+stages:
+  - lint
+  - test
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm install
+
+lint:
+  stage: lint
+  script: npm run lint
+
+test:
+  stage: test
+  script: npm run test
+
+deploy:
+  stage: deploy
+  image: ruby:latest
+  environment: production
+  only:
+    - master
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
