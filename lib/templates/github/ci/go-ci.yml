@@ -1,28 +1,20 @@
 name: ci
-
 on: [push, pull_request]
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     strategy:
       fail-fast: false
-
       matrix:
         go-version: latest
-
     steps:
       - uses: actions/checkout@v3
-
       - uses: actions/setup-go@v3
         with:
           go-version: ${{ matrix.go-version }}
-
       - run: |
           go version
           go get -u golang.org/x/lint/golint
-
       - run: |
           go vet .
           golint .
