@@ -23,8 +23,3 @@ variables:
 test:
   script:
     - vendor/bin/phpunit --configuration phpunit.xml --coverage-text --colors=never
-
-deploy:
-  stage: deploy
-  script: echo "Define your deployment script!"
-  environment: production
