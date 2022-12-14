@@ -1,32 +1,28 @@
 image: ruby:latest
-
 services:
   - mysql:latest
   - redis:latest
   - postgres:latest
-
 variables:
   POSTGRES_DB: database_name
-
 cache:
   paths:
     - vendor/ruby
-
 before_script:
   - ruby -v
   - apt-get update -q && apt-get install nodejs -yqq
   - bundle config set --local deployment true
   - bundle install -j $(nproc)
-
 rubocop:
+  stage: rubocop
   script:
     - rubocop
-
 rspec:
+  stage: rspec
   script:
     - rspec spec
-
 rails:
+  stage: rails
   variables:
     DATABASE_URL: 'postgresql://postgres:postgres@postgres:5432/$POSTGRES_DB'
   script:
