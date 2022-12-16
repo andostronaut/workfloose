@@ -3,7 +3,7 @@
 ![Compile and build](https://github.com/iamando/workfloose/actions/workflows/ci.yml/badge.svg)
 ![Deploy](https://github.com/iamando/workfloose/actions/workflows/cd.yml/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![npm version](https://badge.fury.io/js/workfloose.svg)](https://badge.fury.io/js/workfloose)
+![npm](https://img.shields.io/npm/v/workfloose)
 
 Scaffold workflow for CI/CD
 
