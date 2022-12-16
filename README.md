@@ -1,6 +1,6 @@
 # Workfloose
 
-![build](https://img.shields.io/github/actions/workflow/status/iamando/workfloose/build.yml?branch=master)
+![build](https://github.com/iamando/workfloose/workflows/build/badge.svg)
 ![license](https://img.shields.io/github/license/iamando/workfloose?color=success)
 ![npm](https://img.shields.io/npm/v/workfloose)
 ![release](https://img.shields.io/github/release-date/iamando/workfloose)
