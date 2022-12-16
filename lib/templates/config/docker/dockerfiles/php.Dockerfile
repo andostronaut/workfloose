@@ -1,7 +1,15 @@
-FROM php:8.2-cli-alpine
+FROM php:8.1-apache
 
-WORKDIR /usr/src/app
+WORKDIR /var/www/html
 
-COPY . /usr/src/app/
+RUN apt-get update && apt-get install -y curl git unzip
 
-CMD [ "php", './index.php' ]
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+COPY . /var/www/html
+
+RUN composer install --no-dev
+
+EXPOSE 80
+
+CMD ["apache2-foreground"]
