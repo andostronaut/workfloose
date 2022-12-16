@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:18.12
 
 WORKDIR /usr/src/app
 
@@ -12,5 +12,5 @@ COPY . .
 # COPY .env .env
 
 EXPOSE 8080
-CMD [ "npm", "run", "start" ]
 
+CMD [ "npm", "run", "start" ]
