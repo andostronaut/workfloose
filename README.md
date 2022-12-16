@@ -3,6 +3,8 @@
 ![build](https://img.shields.io/github/actions/workflow/status/iamando/workfloose/build.yml?branch=master)
 ![license](https://img.shields.io/github/license/iamando/workfloose?color=success)
 ![npm](https://img.shields.io/npm/v/workfloose)
+![release](https://img.shields.io/github/release-date/iamando/workfloose)
+![codebase](https://github.com/iamando/workfloose/workflows/codebase/badge.svg)
 
 Scaffold workflow for CI/CD
 
