@@ -3,7 +3,6 @@
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/iamando/workfloose/ci.yml?branch=master&style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/iamando/workfloose?color=success&style=for-the-badge)
 ![npm](https://img.shields.io/npm/v/workfloose?style=for-the-badge)
-![GitHub repo size](https://img.shields.io/github/repo-size/iamando/workfloose?style=for-the-badge)
 ![npm](https://img.shields.io/npm/dw/workfloose?style=for-the-badge)
 
 Scaffold workflow for CI/CD
