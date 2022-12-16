@@ -1,7 +1,7 @@
 {
   "name": "workfloose",
   "description": "Scaffold workflow for CI/CD",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "license": "MIT",
   "bin": {
     "workfloose": "index.js"
