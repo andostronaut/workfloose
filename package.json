@@ -10,8 +10,14 @@
     "name": "iamando",
     "email": "iamando@tuta.io"
   },
-  "homepage": "https://github.com/iamando/workfloose",
-  "repository": "https://github.com/iamando/workfloose.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamando/workfloose.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iamando/workfloose/issues"
+  },
+  "homepage": "https://github.com/iamando/workfloose#readme",
   "keywords": [
     "workfloose",
     "github",
