@@ -8,6 +8,8 @@
 
 Scaffold workflow for CI/CD
 
+![Demo](docs/workfloose.png)
+
 ## Install
 
 ```bash
