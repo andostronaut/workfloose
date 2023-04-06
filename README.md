@@ -34,18 +34,30 @@ cd project_name
 Now, you can generate workflows with the command **genarate**
 
 ```bash
+# recommended
+npx workfloose generate
+
+# using global installation
 workfloose generate
 ```
 
 The following is the help text from the workfloose cli. To see this and more information anytime,add the **help** command to your call.
 
 ```bash
+# recommended
+npx workfloose help
+
+# using global installation
 workfloose help
 ```
 
 Check version of workfloose with **version** command
 
 ```bash
+# recommended
+npx workfloose version
+
+# using global installation
 workfloose version
 ```
 
