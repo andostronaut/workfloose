@@ -8,7 +8,7 @@
 
 Scaffold workflow for CI/CD
 
-![Demo](docs/workfloose.png)
+![Demo](docs/demo.png)
 
 ## Install
 
